@@ -1,0 +1,17 @@
+2012-03-10 09:29:26 MySQL error:  
+            Query execution was interrupted 
+            Query:  
+            INSERT INTO `uniq`
+                         SET 
+                         `subaccount_id` = 47366,
+                         `user_id`       = 29748,               
+                         `site_id`       = 901,
+                         `id_site`       = 901,    
+                         `date`          ='2012-03-10',
+                         ru_uniq = 1
+                        ON DUPLICATE KEY UPDATE 
+                        ru_uniq=ru_uniq + 1  
+            File: /home/sites/limoncash_domains_subs_a1_all/processing_a1_all_new/processing_request.php 
+            Line: 115
+
+8

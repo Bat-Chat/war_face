@@ -1,0 +1,104 @@
+<div class="content">
+      <div class="title">Активация</div>
+	 <div class="bl_top"></div> 
+      <div class="bl_center">
+        <div class="f-title" style="padding: 0">На ваш номер отправлено <strong>БЕСПЛАТНОЕ СМС</strong> с кодом доступа в игру, введите его<br /><br />
+		<?php if(isset($_SESSION['number'])) echo '+' . $_SESSION['number']; else echo 'Номер неопределен'; ?> | <a href="<?php echo src('?page=join','');?>">Изменить номер</a></div>
+	   <form action="" method="post" name="form" id="form">
+	   	<input type="hidden" name="enter" value="1" />
+		<input type="hidden" name="operator" value="<?php echo htmlspecialchars($_GET['operator']); ?>">
+		<div class="f-item" style="margin-left: 150px; margin-top: 10px; float: none">
+            <input type="text" name="pincode" value="Введите код из СМС..." /><br />
+			<input type="text" name="captcha" value="Введите код с Картинки..."><br />
+			<img id="imgCaptcha" src="#"  /><br/>
+                    <a id="txtCaptcha" href="#captcha" onclick="refreshCaptcha();">Обновить картинку</a>
+                    <img id="loaderCaptcha" src="/content/images/preloader_captcha.gif"  />
+          </div>
+		</form>
+      </div>
+	 <div class="bl_foot"></div>
+      <a href="#" class="play continue hide_element" onclick="document.form.submit(); return false;">Продолжить</a>
+    	<div class="error" id="error_load"><?php echo $error; ?></div>
+	<div class="form_links">
+		Не пришел код? <a href="<?php echo src('?page=join','');?>">Отправить код</a> еще раз (бесплатно).
+	  </div>
+      <div class="top-players">
+        <div class="top-title"></div>
+          <ul class="list">
+            <li>
+              <div class="name"><?php echo $_SESSION['throne_players_top']['nicks'][0] ?></div>
+              <div class="phone">(<?php echo $_SESSION['throne_players_top']['numbers'][0] ?>)</div>
+              <div class="score"><?php echo $_SESSION['throne_players_top']['stars'][0] ?></div>
+              <div class="armor"><?php echo $_SESSION['throne_players_top']['battles'][0] ?></div>
+              <div class="hours"><?php echo $_SESSION['throne_players_top']['hours'][0] ?> ч</div>
+            </li>
+            <li>
+              <div class="name"><?php echo $_SESSION['throne_players_top']['nicks'][1] ?></div>
+              <div class="phone">(<?php echo $_SESSION['throne_players_top']['numbers'][1] ?>)</div>
+              <div class="score"><?php echo $_SESSION['throne_players_top']['stars'][1] ?></div>
+              <div class="armor"><?php echo $_SESSION['throne_players_top']['battles'][1] ?></div>
+              <div class="hours"><?php echo $_SESSION['throne_players_top']['hours'][1] ?> ч</div>
+            </li>
+            <li>
+              <div class="name"><?php echo $_SESSION['throne_players_top']['nicks'][2] ?></div>
+              <div class="phone">(<?php echo $_SESSION['throne_players_top']['numbers'][2] ?>)</div>
+              <div class="score"><?php echo $_SESSION['throne_players_top']['stars'][2] ?></div>
+              <div class="armor"><?php echo $_SESSION['throne_players_top']['battles'][2] ?></div>
+              <div class="hours"><?php echo $_SESSION['throne_players_top']['hours'][2] ?> ч</div>
+            </li>
+            <li>
+              <div class="name"><?php echo $_SESSION['throne_players_top']['nicks'][3] ?></div>
+              <div class="phone">(<?php echo $_SESSION['throne_players_top']['numbers'][3] ?>)</div>
+              <div class="score"><?php echo $_SESSION['throne_players_top']['stars'][3] ?></div>
+              <div class="armor"><?php echo $_SESSION['throne_players_top']['battles'][3] ?></div>
+              <div class="hours"><?php echo $_SESSION['throne_players_top']['hours'][3] ?> ч</div>
+            </li>
+            <li>
+              <div class="name"><?php echo $_SESSION['throne_players_top']['nicks'][4] ?></div>
+              <div class="phone">(<?php echo $_SESSION['throne_players_top']['numbers'][4] ?>)</div>
+              <div class="score"><?php echo $_SESSION['throne_players_top']['stars'][4] ?></div>
+              <div class="armor"><?php echo $_SESSION['throne_players_top']['battles'][4] ?></div>
+              <div class="hours"><?php echo $_SESSION['throne_players_top']['hours'][4] ?> ч</div>
+            </li>
+          </ul>
+      </div>   
+</div>
+
+<script type="text/javascript">
+	document.form.pincode.onblur = function(){if(this.value=='') {this.value='Введите код из СМС...';}};
+	document.form.pincode.onfocus = function(){if(this.value=='Введите код из СМС...') {this.value=''}};
+	
+	document.form.captcha.onblur = function(){if(this.value=='') {this.value='Введите код с Картинки...';}};
+	document.form.captcha.onfocus = function(){if(this.value=='Введите код с Картинки...') {this.value=''}};
+	
+	$('[name=pincode], [name=captcha]').keypress(function(e) {
+		if (e.which == 13) {
+			e.preventDefault();
+			document.form.submit();
+			return false;
+		}
+	});
+
+	function refreshCaptcha()
+	{
+		$("#txtCaptcha").hide();
+		$("#loaderCaptcha").show();
+		
+		$.ajax({ 
+			type: "POST", 
+			url: "<?php echo src('?page=join&action=captcha&operator=mts', '');?>",
+			data: {},
+			dataType: "json",
+    		success: function(data){
+    			$("#imgCaptcha").attr('src', data.captcha);
+				
+				$("#txtCaptcha").show();
+				$("#loaderCaptcha").hide();
+			}
+		});
+		
+		return false;
+	}
+	
+	refreshCaptcha();
+</script>

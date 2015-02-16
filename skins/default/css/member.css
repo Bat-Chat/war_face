@@ -1,0 +1,413 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+:focus {
+  outline: 0;
+}
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  width: 100%;
+  font: 12px/1 "HelveticaNeueCyr-Roman", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  background: #F2F2F2 url(../images/member/bg.png) repeat-y center top;
+}
+a {
+  color: blue;
+  outline: none;
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
+}
+p {
+  margin: 0 0 18px
+}
+img {
+  border: none;
+}
+input {
+  vertical-align: middle;
+}
+@font-face {
+  font-family: 'HelveticaNeueCyr-Roman';
+  src: url('fonts/helveticaneuecyr-roman.eot');
+  src: url('fonts/helveticaneuecyr-roman.eot?#iefix') format('embedded-opentype'),
+       url('fonts/helveticaneuecyr-roman.woff') format('woff'),
+       url('fonts/helveticaneuecyr-roman.ttf') format('truetype'),
+       url('fonts/helveticaneuecyr-roman.svg#helveticaneuecyr-roman') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.wrap {
+  margin: 0 auto;
+  width: 1000px;
+}
+.header {
+  background: url(../images/member/header.png) repeat-x left bottom;
+  padding: 0 0 5px 0;
+  min-height: 77px;
+}
+.header .logo {
+  float: left;
+  background: url(../images/member/logo.png) no-repeat 0 0;
+  width: 179px;
+  height: 60px;
+  margin: 4px 56px 0 -33px;
+}
+.header .title {
+  height: 55px;
+  line-height: 55px;
+  margin: 9px 0 0;
+  padding: 0 0 0 19px;
+  width: 755px;
+  float: left;
+  font-size: 24px;
+  color: #333;
+  border: 1px solid #DEDEDE;
+  background: #fff url(../images/member/title.png) no-repeat left center;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 4px #ccc;
+  -moz-box-shadow: 0px 0px 4px #ccc;
+  box-shadow: 0px 0px 4px #ccc;
+}
+.inner {
+  overflow: hidden;
+}
+.inner .sidebar {
+  float: left;
+  margin: 17px 0 0 -16px;
+  position: relative;
+  z-index: 5;
+  width: 205px;
+}
+.inner .sidebar .nav {
+
+}
+.inner .sidebar .nav li {
+  height: 34px;
+  border-bottom: 1px dotted #C7C7C7;
+  width: 187px;
+}
+.inner .sidebar .nav li a {
+  display: block;
+  width: 202px;
+  height: 33px;
+  font-size: 15px;
+  text-decoration: none;
+  color: #666;
+  margin: 1px 0 0 0;
+  line-height: 32px;
+  text-indent: 22px;
+  background: url(../images/member/li.png) no-repeat 7px center;
+}
+.inner .sidebar .nav li.active a, .inner .sidebar .nav a:hover {
+  background: url(../images/member/li-active.png) no-repeat 0 0;
+  color: #fff;
+} 
+.inner .content {
+  float: left;
+  width: 795px;
+  overflow: hidden;
+}
+.item-wrap {
+  margin: 17px 0 22px;
+  overflow: hidden;
+  width: 785px;
+}
+.item-wrap .item {
+  float: left;
+  width: 149px;
+  height: 279px;
+  background: #fff;
+  padding: 18px;
+  margin: 0 9px 10px 0;
+  border: 1px solid #DEDEDE;
+  overflow-y:hidden;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 4px #ccc;
+  -moz-box-shadow: 0px 0px 4px #ccc;
+  box-shadow: 0px 0px 4px #ccc;
+}
+.item-wrap .item .overfl{
+  width: 150px;
+  height: 125px;
+  overflow:hidden;
+}
+
+.item-wrap .item .pic {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  display: block;
+  margin: 0 0 11px;
+}
+.item-wrap .item .title {
+  color: #1da2e0;
+  font: 16px Arial;
+  line-height:20px;
+}
+.item-wrap .item .desc {
+  color: #666666;
+  font: 12px Arial;
+  line-height:14px;
+  overflow:hidden;
+  margin: 11px 0 0;
+}
+.paging {
+  margin: 10px 0 144px 12px;
+  overflow: hidden;
+}
+.paging li {
+  list-style: none;
+  float: left;
+  line-height: 25px;
+  font-size: 15px;
+  color: #666;
+  text-align: center;
+  margin: 0 2px 0 0;
+  border: 1px solid #DEDEDE;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.paging li a {
+  display: block;
+  width: 25px;
+  height: 25px;
+  text-decoration: none;
+  color: #666;
+  background: #dedede;
+}
+.paging li.active a, .paging li a:hover {
+  background: #fff;
+} 
+.paging .next {
+  color: #666666;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 0 0 0 6px;
+  text-decoration: none;
+  *display: inline;
+  zoom: 1;
+}
+.single {
+  color: #333333;
+  margin: 16px 0 0 13px;
+  width: 775px;
+}
+.single-inner {
+  background: #fff;
+  border: 1px solid #DEDEDE;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 4px #ccc;
+  -moz-box-shadow: 0px 0px 4px #ccc;
+  box-shadow: 0px 0px 4px #ccc;  
+}
+.single-top {
+  border-bottom: 1px dotted #C7C7C7;
+  margin: 20px 0 0 18px;
+  overflow: hidden;
+  padding: 0 0 11px;
+  width: 730px;
+}
+.single-thumb {
+  width: 161px;
+  height: 161px;
+  float: left;
+  overflow: hidden;
+}
+.single-inner .title {
+  font-size: 24px;
+  line-height: 27px;
+  margin: 0 0 0 177px;
+}
+.single-inner .desc {
+  color: #666666;
+  font: 12px/1.3 Arial;
+  margin: 20px 0 19px 177px;
+}
+.single-inner .social {
+  font: 11px/1 Arial;
+  color: #bcbcbc;
+  padding: 0 0 0 177px;
+}
+.single-inner .social img {
+  margin: 0 0 0 6px;
+  position: relative;
+  top: 6px;
+}
+.single .game {
+  width: 640px;
+  height: 480px;
+  overflow: hidden;
+  margin: 18px auto 41px;
+  background: url(../images/member/loading.gif) no-repeat center center;
+}
+.other {
+    margin: 37px 0 0;
+}
+.other-title {
+  font-size: 24px;
+  background: url(../images/member/title-2.png) no-repeat 0 center;
+  padding: 0 0 0 20px;
+}
+.footer {
+  background: url(../images/member/footer.png) repeat-x top left;
+}
+.footer .nav-bottom {
+  overflow: hidden;
+  padding: 47px 0 0 200px;
+  margin: 0 0 10px;
+}
+.footer .nav-bottom li {
+  float: left;
+  height: 14px;
+  border-left: 1px solid #999;
+}
+.footer .nav-bottom li:first-child {
+  border: none;
+}
+.footer .nav-bottom li:first-child a {
+  padding-left: 0;
+}
+.footer .nav-bottom li a {
+  color: #999999;
+  font: 12px/14px Arial;
+  padding: 0 3px;
+}
+.footer .nav-bottom li a:hover {
+  text-decoration: underline;
+}
+.footer .info {
+  clear: both;
+  color: #999;
+  font: 12px/14px Arial;
+  padding: 0 0 50px 200px;
+}
+.footer .info p {
+  margin: 0 0 5px 0;
+}
+
+.footer_black {
+  background: url(../images/member/footer.png) repeat-x top left; 
+  background-color:#FFF;
+}
+.footer_black .nav-bottom {
+  overflow: hidden;
+  padding: 0 0 50px 200px;
+  margin: 0;
+}
+.footer_black .nav-bottom li {
+  float: left;
+  height: 10px;
+  
+}
+.footer_black .nav-bottom li:first-child {
+  border: none;
+}
+.footer_black .nav-bottom li:first-child a {
+  padding-left: 0;
+}
+.footer_black .nav-bottom li a {
+  color: #F4EFEF;
+  font: 9px/10px Arial;
+  padding: 0 3px;
+  text-decoration: underline;
+}
+.footer_black .nav-bottom li a:hover {
+  text-decoration: underline;
+}
+.footer_black .info {
+  clear: both;
+  color: #F4EFEF;
+  font: 9px/10px Arial;
+  padding: 800px 0 0 200px;
+}
+.footer_black .info p {
+  margin: 0;
+}
+
+.download_torrent {
+	text-align: left;
+	font-size: 16px;
+	margin: 0 auto 20px;
+	border-top: 1px dotted #C7C7C7;
+	padding-top: 5px;
+	width: 730px;
+}
+.download_torrent p {
+	margin: 0 0 10px;
+}
+.download_torrent p.description {
+	font-size: 13px;
+	color: #666;
+	margin-top: 20px;
+}
+.download_torrent p img {
+	margin-right: 10px;
+}
+.download_torrent p.sys {
+	font-size: 13px;
+}
+.download_torrent .title {
+	font-size: 24px;
+	line-height: 27px;
+	margin-left: 0;
+	margin-top: 20px;
+}
+/* Торрент игры */
+.single-top table td.imggame{
+	vertical-align:top; 
+	text-align:left; 
+	width:370px; 
+}
+.single-top table td.txtgame{
+	vertical-align:top; 
+	text-align:left;  
+}
+.single-top table td h1{
+	font-size:18px;
+}
+.single-top table td li{
+	font-size:14px;
+	line-height:17px;
+}
+.single-top table td p{
+	font-size:14px;
+	line-height:17px;
+}

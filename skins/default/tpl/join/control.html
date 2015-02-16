@@ -1,0 +1,43 @@
+<div class="content">
+      <div class="title" style="font-size: 16px">Управление подпиской</div> 
+	 <div class="bl_top"></div>
+      <div class="bl_center">
+        <div class="f-title" style="padding: 0">Если Вы желаете прекратить действие подписки, введите номер своего телефона и нажмите &quot;Отписаться&quot;.<br /><br />
+		<?php echo CONTROL_TEXT;?></div>
+	   <form action="" method="post" name="form" id="form">
+	   	<input type="hidden" name="ok" value="1" />
+          <div class="f-item f-first" style="margin-left: 150px; margin-top: 10px; float: none">
+            <label>Телефон</label>
+            <input type="text" name="number" value="+7" onkeypress="if (event.keyCode==13) {$('#form').submit(); return false;};" />
+            <div class="message">Например: +79991115566</div>
+          </div>
+		</form>
+      </div>
+	 <div class="bl_foot"></div>
+      <a href="#" class="play continue" onclick="$('#form').submit(); return false;">Отписаться</a> 
+</div>
+
+<div style="display:none;" id="dialog1" title="Управление подпиской"><strong style="color: #FF0000"><?php echo $error; ?></strong></div>
+
+<script type="text/javascript">
+
+var $error = $('#dialog1 strong').html();
+if($error != '')
+{
+	$('head').append('<link rel="stylesheet" type="text/css" href="<?php echo src("jquery-ui-1.8.23.custom-grey.css","css"); ?>" /> ');	
+	$(function(){
+		$("#dialog1").dialog({
+			title:'Управление подпиской',
+			modal: true,
+			buttons: {
+				"Закрыть": function() {
+					$(this).dialog("close");
+				}
+	    	},
+		resizable: false,
+		width: 300
+		});
+ 	}); 
+}
+
+</script>

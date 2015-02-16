@@ -1,0 +1,111 @@
+<script type="text/javascript">	
+	var sid = '<?php echo $site_id ?>';
+    var advert = '<?php echo $advert ?>';
+	var number_prefix = <?php echo json_encode($prefix) ?>;
+	var short_number = <?php echo json_encode($num) ?>;
+	var sms_cost = <?php echo json_encode($cost) ?>;
+	var sms_dop =  <?php echo json_encode($dop) ?>;
+	var href =  <?php echo json_encode($href) ?>;
+	var text_rule = <?php echo json_encode($text_rule) ?>;
+	function ge(id) {
+    	return document.getElementById(id);
+	}	
+
+	function show_country(sel) 
+	{
+		var countryId = ge('country_id').value;
+		ge('code').innerHTML = number_prefix[countryId];
+		ge('number').innerHTML = short_number[countryId];
+		if(sms_dop[countryId] != '' && sms_dop[countryId] != 0)						
+			ge('dop').innerHTML = '(Если не получается отправить смс на номер <b  style="color: #ff0000; font-size: 12px">'+short_number[countryId]+',</b> то попробуйте отправить на <b  style="color:#ff0000; font-size: 12px">'+sms_dop[countryId]+'</b>)<br />';
+		else
+			ge('dop').innerHTML = '';
+		ge('cost').innerHTML = sms_cost[countryId];	
+		ge('link_rule').innerHTML = '<a href="'+href[countryId]+'" target="_blank">Информация для абонентов</a>';
+		ge('text_rule').innerHTML = text_rule[countryId];
+	}	
+
+</script>
+
+
+<div class="content">
+      <div class="title">Авторизация</div>
+	 <div class="bl_top"></div> 
+      <div class="bl_center">
+        <div class="f-title" style="padding: 0">Для успешного продолжения Вам нужно отправить СМС и ввести полученный КОД ДОСТУПА</div>
+	   <form action="" method="post" name="form" id="form">
+	   	<input type="hidden" name="enter" value="1" />
+		<div class="f-item f-first">
+    <p>Ваш номер телефона: +<?php echo $_SESSION['number']; ?> | <a style="color:#C8AF88" href="<?php echo src('?page=join',''); ?>">изменить номер</a>
+            <br /><span style="font-size:12px;">(СМС принимаются только с этого номера)</span></p>
+            <label>Страна</label>
+            <select name="country_id" id="country_id" onchange="show_country()" style="height: 30px">
+  			<?php echo $option;?>
+  		</select>
+          </div>
+		<div class="f-item">
+            <label>Код</label>
+            <input type="text" name="pincode" onkeypress="if (event.keyCode==13) {$('#form').submit(); return false;};" />
+          </div>
+		<div class="clear"></div>
+		</form>
+		<p style="text-align: center; color: #FFFFFF; margin-top: 20px">
+		  	Для активации Вашей учетной записи отправьте сообщение c текстом <span id="code" style="color: #FF0000"></span> на номер <span id="number" style="color: #FF0000"></span>.
+			В ответном сообщении Вам придёт ключ доступа к нашему сайту.
+  		</p>
+      </div>
+	 <div class="bl_foot"></div>
+      <a href="#" class="play continue" onclick="$('#form').submit(); return false;">Продолжить</a>
+    	<div class="error"><?php echo $error ?></div>
+	<div class="form_links">
+	  	Не пришел код? <a href="<?php echo src('?page=join','');?>">Отправить код</a> еще раз (бесплатно).
+		<p id="dop" style="margin-left: 15px"></p>
+		<p id="cost"></p>
+		<p id="link_rule"><a href="/portal/help.html" target="_blank">Информация для абонентов</a></p>
+		<p id="text_rule"><?php echo $text_rule[1]; ?></p>
+	  </div>
+      <div class="top-players">
+        <div class="top-title"></div>
+          <ul class="list">
+            <li>
+              <div class="name"><?php echo $_SESSION['throne_players_top']['nicks'][0] ?></div>
+              <div class="phone">(<?php echo $_SESSION['throne_players_top']['numbers'][0] ?>)</div>
+              <div class="score"><?php echo $_SESSION['throne_players_top']['stars'][0] ?></div>
+              <div class="armor"><?php echo $_SESSION['throne_players_top']['battles'][0] ?></div>
+              <div class="hours"><?php echo $_SESSION['throne_players_top']['hours'][0] ?> ч</div>
+            </li>
+            <li>
+              <div class="name"><?php echo $_SESSION['throne_players_top']['nicks'][1] ?></div>
+              <div class="phone">(<?php echo $_SESSION['throne_players_top']['numbers'][1] ?>)</div>
+              <div class="score"><?php echo $_SESSION['throne_players_top']['stars'][1] ?></div>
+              <div class="armor"><?php echo $_SESSION['throne_players_top']['battles'][1] ?></div>
+              <div class="hours"><?php echo $_SESSION['throne_players_top']['hours'][1] ?> ч</div>
+            </li>
+            <li>
+              <div class="name"><?php echo $_SESSION['throne_players_top']['nicks'][2] ?></div>
+              <div class="phone">(<?php echo $_SESSION['throne_players_top']['numbers'][2] ?>)</div>
+              <div class="score"><?php echo $_SESSION['throne_players_top']['stars'][2] ?></div>
+              <div class="armor"><?php echo $_SESSION['throne_players_top']['battles'][2] ?></div>
+              <div class="hours"><?php echo $_SESSION['throne_players_top']['hours'][2] ?> ч</div>
+            </li>
+            <li>
+              <div class="name"><?php echo $_SESSION['throne_players_top']['nicks'][3] ?></div>
+              <div class="phone">(<?php echo $_SESSION['throne_players_top']['numbers'][3] ?>)</div>
+              <div class="score"><?php echo $_SESSION['throne_players_top']['stars'][3] ?></div>
+              <div class="armor"><?php echo $_SESSION['throne_players_top']['battles'][3] ?></div>
+              <div class="hours"><?php echo $_SESSION['throne_players_top']['hours'][3] ?> ч</div>
+            </li>
+            <li>
+              <div class="name"><?php echo $_SESSION['throne_players_top']['nicks'][4] ?></div>
+              <div class="phone">(<?php echo $_SESSION['throne_players_top']['numbers'][4] ?>)</div>
+              <div class="score"><?php echo $_SESSION['throne_players_top']['stars'][4] ?></div>
+              <div class="armor"><?php echo $_SESSION['throne_players_top']['battles'][4] ?></div>
+              <div class="hours"><?php echo $_SESSION['throne_players_top']['hours'][4] ?> ч</div>
+            </li>
+          </ul>
+      </div>   
+</div>
+
+<script type="text/javascript">
+	show_country();
+</script>

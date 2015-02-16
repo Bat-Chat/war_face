@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Онлайн игра по мотивам книг и сериала &quot;ИГРА ПРЕСТОЛОВ&quot;</title>
+  <link rel="stylesheet" href="skins/<?php echo IRB_SKIN ?>/css/main.css" media="all">
+  <script type="text/javascript" src="skins/<?php echo IRB_SKIN ?>/js/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="skins/<?php echo IRB_SKIN ?>/js/jquery-ui-1.8.23.custom.min.js"></script>
+  <script type="text/javascript" src="skins/<?php echo IRB_SKIN ?>/js/jquery.cookie.js"></script>
+  <script type="text/javascript" src="skins/<?php echo IRB_SKIN ?>/js/scripts.js"></script>
+  <script type="text/javascript" src="/content/js/format_number.js"></script>
+</head>
+<body>
+<style>
+.header_rul{
+	position: fixed;
+	top:0px; 
+	background-color:#FFFFFF; 
+	width:100%; 
+	text-align:center; 
+	height:20px; 
+	z-index:1000; 
+	border-bottom:1px solid #000000; 
+  font: 9pt Arial, Helvetica, Garuda, sans-serif, sans-serif;
+}
+.header_rul a{
+	color: #000000;
+}
+</style>
+<div class="header_rul">
+	<span>
+  <a href="/" style="color: #000000">Вернуться назад</a> | 
+    	<a href="/?page=control" target="_blank">Управление Подпиской на Контент</a> |
+        <a href="/portal/rules.php"  target="_blank">Правила предоставления Подписки на Контент</a> |
+        <a href="?page=join&action=activate&join=1">Получить Контент</a>
+	</span>
+</div>
+
+	<?php if(!isset($_SESSION['vhod'])){ ?>
+		<div class="entry-buttonw">
+            <div>
+                <a href="<?php echo src('?page=join&action=activate', '') ?>">получить <br /> контент </a>
+            </div>
+        	</div>
+        	<?php }; ?>
+  <div class="wrap">
+    <div class="header">
+      <a href="<?php echo '/'.PATH.'/' ?>" class="logo"></a>
+    </div>
+    
+    <?php echo $content ?>
+    
+    <div class="footer">
+      <div class="steps">
+        <div class="step step-1">Онлайн игра по мотивам книг и сериала “Игра престолов”</div>
+        <div class="step step-2">Стильная графика, великолепный саундтрек, разнообразный динамичный мультиплеер</div>
+        <div class="step step-3">Большой выбор оружия, с возможность модернизации</div>
+      </div>
+      <div class="social">
+       <div class="facebook" onClick="vote('fb')">
+         <div class="text"><span>Я рекомендую</span></div>
+         <div class="num"><span id="fb_counter"><?php echo $_SESSION['throne_fb_count'] ?></span></div>
+       </div>
+       <div class="vk" onClick="vote('vk')">
+         <div class="text"><span>Сохранить</span></div>
+         <div class="num"><span id="vk_counter"><?php echo $_SESSION['throne_vk_count'] ?></span></div>
+       </div>
+       <div class="ok" onClick="vote('ok')">
+         <div class="ok-inner">
+           <div class="text">Нравится</div>
+           <div class="num" id="ok_counter"><?php echo $_SESSION['throne_ok_count'] ?></div>
+         </div>
+       </div>
+       <div class="mailru" onClick="vote('mra')">
+         <div class="mailru-inner">
+           <div class="text">Нравится</div>
+           <div class="num" id="mra_counter"><?php echo $_SESSION['throne_mra_count'] ?></div>
+         </div>
+       </div>
+       <div class="twitter" onClick="vote('twit')">
+         <div class="text"><span>Твитнуть</span></div>
+         <div class="num"><span id="twit_counter"><?php echo $_SESSION['throne_twit_count'] ?></span></div>
+       </div>
+     </div>
+     <ul class="nav-bottom">
+	<li><a href="<?php echo src('?page=join&action=activate',''); ?>">Получить Контент</a></li>
+       <li><a href="/?page=control" target="_blank">Управление Подпиской на Контент</a></li>
+       <li><a href="/portal/rules.php" target="_blank">Правила предоставления Подписки на Контент</a></li>
+       <li><a href="/?page=mail" target="_blank">Обратная связь</a></li>
+       <li><a href="/?page=mail" target="_blank">Пожаловаться на спам (AntiSpam)</a></li>
+       <li><a href="#" onclick="javascript:window.open('/portal/rules_mts.php', 'popup', 'width=500,height=500,scrollbars=1');return false;">Стоимость услуги</a></li>
+     </ul>
+     <div class="info">
+       <p><?php echo FOOTER_M; ?></p>
+     </div>
+    </div>
+  </div>
+</body>
+</html>

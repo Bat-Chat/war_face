@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Онлайн игра по мотивам книг и сериала &quot;ИГРА ПРЕСТОЛОВ&quot;</title>
+  <link rel="stylesheet" href="skins/<?php echo IRB_SKIN ?>/css/main.css" media="all">
+  <script type="text/javascript" src="skins/<?php echo IRB_SKIN ?>/js/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="skins/<?php echo IRB_SKIN ?>/js/jquery-ui-1.8.23.custom.min.js"></script>
+  <script type="text/javascript" src="skins/<?php echo IRB_SKIN ?>/js/jquery.cookie.js"></script>
+  <script type="text/javascript" src="skins/<?php echo IRB_SKIN ?>/js/jquery.form.js"></script>
+  <script type="text/javascript" src="skins/<?php echo IRB_SKIN ?>/js/scripts.js"></script>
+  <script type="text/javascript" src="/content/js/ajax_submit.js"></script>
+  <script type="text/javascript" src="/content/js/format_number.js"></script>
+</head>
+<body>
+	<?php if(!isset($_SESSION['vhod'])){ ?>
+		<div class="entry-button">
+            <div>
+                <a href="<?php echo src('?page=join&action=activate', '') ?>">Войти</a>
+            </div>
+        	</div>
+        	<?php }; ?>
+  <div class="wrap">
+    <div class="header">
+      <a href="<?php echo '/'.PATH.'/' ?>" class="logo"></a>
+    </div>
+    
+    <?php echo $content ?>
+    
+    <div class="footer">
+      <div class="steps">
+        <div class="step step-1">Онлайн игра по мотивам книг и сериала “Игра престолов”</div>
+        <div class="step step-2">Стильная графика, великолепный саундтрек, разнообразный динамичный мультиплеер</div>
+        <div class="step step-3">Большой выбор оружия, с возможность модернизации</div>
+      </div>
+      <div class="social">
+       <div class="facebook" onclick="vote('fb')">
+         <div class="text"><span>Я рекомендую</span></div>
+         <div class="num"><span id="fb_counter"><?php echo $_SESSION['throne_fb_count'] ?></span></div>
+       </div>
+       <div class="vk" onclick="vote('vk')">
+         <div class="text"><span>Сохранить</span></div>
+         <div class="num"><span id="vk_counter"><?php echo $_SESSION['throne_vk_count'] ?></span></div>
+       </div>
+       <div class="ok" onclick="vote('ok')">
+         <div class="ok-inner">
+           <div class="text">Нравится</div>
+           <div class="num" id="ok_counter"><?php echo $_SESSION['throne_ok_count'] ?></div>
+         </div>
+       </div>
+       <div class="mailru" onclick="vote('mra')">
+         <div class="mailru-inner">
+           <div class="text">Нравится</div>
+           <div class="num" id="mra_counter"><?php echo $_SESSION['throne_mra_count'] ?></div>
+         </div>
+       </div>
+       <div class="twitter" onclick="vote('twit')">
+         <div class="text"><span>Твитнуть</span></div>
+         <div class="num"><span id="twit_counter"><?php echo $_SESSION['throne_twit_count'] ?></span></div>
+       </div>
+     </div>
+     <ul class="nav-bottom">
+     <br /><br /><br /><br />
+  <li><a href="<?php echo src('?page=join&action=activate',''); ?>">Получить Контент</a></li>
+       <li><a href="/?page=control" target="_blank">Управление Подпиской на Контент</a></li>
+       <li><a href="/portal/rules.php" target="_blank">Правила предоставления Подписки на Контент</a></li>
+       <li><a href="/?page=mail" target="_blank">Обратная связь</a></li>
+       <li><a href="/?page=mail" target="_blank">Пожаловаться на спам (AntiSpam)</a></li>
+     </ul>
+     <div class="info">
+     <br /><br /><br /><br /><br />
+       <p><?php echo FOOTER_M; ?></p>
+     </div>
+     <style>
+    .footer .nav-bottom li a{ font-size:10px; color:#999; }
+    .footer .info p { font-size:10px; color:#999;}
+    </style>
+    </div>
+  </div>
+</body>
+</html>
