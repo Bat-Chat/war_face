@@ -36,7 +36,7 @@
 			include IRB_ROOT.'/modules/main/router.php';		    
 	}
 	
-	if (TYPE != 'black')
+	if (TYPE == 'black')
 	{
 		include IRB_ROOT.'skins/'.IRB_SKIN.'/tpl/index_black.html';
 	}

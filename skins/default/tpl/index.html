@@ -13,84 +13,122 @@
 <body>
 <style>
 .header_rul{
-	position: fixed;
-	top:0px; 
-	background-color:#FFFFFF; 
-	width:100%; 
-	text-align:center; 
-	height:20px; 
-	z-index:1000; 
-	border-bottom:1px solid #000000; 
+  position: fixed;
+  top:0px; 
+  background-color:#FFFFFF; 
+  width:100%; 
+  text-align:center; 
+  height:20px; 
+  z-index:1000; 
+  border-bottom:1px solid #000000; 
   font: 9pt Arial, Helvetica, Garuda, sans-serif, sans-serif;
 }
 .header_rul a{
-	color: #000000;
+  color: #000000;
 }
 </style>
 <div class="header_rul">
-	<span>
+  <span>
   <a href="/" style="color: #000000">Вернуться назад</a> | 
-    	<a href="/?page=control" target="_blank">Управление Подпиской на Контент</a> |
+      <a href="/?page=control" target="_blank">Управление Подпиской на Контент</a> |
         <a href="/portal/rules.php"  target="_blank">Правила предоставления Подписки на Контент</a> |
         <a href="?page=join&action=activate&join=1">Получить Контент</a>
-	</span>
+  </span>
 </div>
 
-	<?php if(!isset($_SESSION['vhod'])){ ?>
-		<div class="entry-buttonw">
+  <?php if(!isset($_SESSION['vhod'])){ ?>
+    <div class="entry-buttonw">
             <div>
                 <a href="<?php echo src('?page=join&action=activate', '') ?>">получить <br /> контент </a>
             </div>
-        	</div>
-        	<?php }; ?>
+          </div>
+          <?php }; ?>
   <div class="wrap">
     <div class="header">
       <a href="<?php echo '/'.PATH.'/' ?>" class="logo"></a>
     </div>
     
     <?php echo $content ?>
+
+    <?php if($_GET['page'] != 'download'): ?>
+    <div class="common-content">
+      <div class="soldiers">
+        <iframe width="429" height="249" src="https://www.youtube.com/embed/mdUrDtfP76k?list=PLRBt_22JHfEyZdExCn9g3fH0JQEXX1qeQ" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="game-desc">
+        <p>
+          Warface - это бесплатный многопользовательский онлайн-шутер, разработанный всемирно известной компанией Crytek. Вам предстоит вести сражения в различных уголках земного шара, начиная с городов и заканчивая самыми опасными местами на планете. Инновационный дизайн проекта сочетает простое управление и уникальный игровой процесс, позволяющий с головой окунуться в суровый мир будущего.
+        </p>
+        <p>
+          Наконец, Warface предлагает широкие возможности для коллективной игры. В кооперативном режиме вас ждут интересные задания, для прохождения которых понадобится не только умение метко стрелять, но и отлаженное командное взаимодействие. В разнообразных PVP-режимах игроки смогут выбрать класс своего бойца и ощутить настоящий накал страстей в увлекательных баталиях.
+        </p>
+      </div>
+      <div class="battles">
+        <ul>
+          <li>
+            <img src="skins/<?php echo IRB_SKIN ?>/images/battleScreen1.jpg" alt="">
+            <p>
+              Захватывающий игровой процесс, который не оставит равнодушным ни одного игрока.
+            </p>
+          </li>
+          <li>
+            <img src="skins/<?php echo IRB_SKIN ?>/images/battleScreen2.jpg" alt="">
+            <p>
+              Возможность выбрать один из четырех классов бойцов, каждый из которых обладает своими индивидуальными особенностями и снаряжением.
+            </p>
+          </li>
+          <li>
+            <img src="skins/<?php echo IRB_SKIN ?>/images/battleScreen3.jpg" alt="">
+            <p>
+              Постоянно обновляемая PVE-вселенная, включающая множество разнообразных совместных заданий.
+            </p>
+          </li>
+          <li>
+            <img src="skins/<?php echo IRB_SKIN ?>/images/battleScreen4.jpg" alt="">
+            <p>
+              Большой выбор режимов игры, сочетающий в себе проверенную временем классику и интригующие нововведения.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <?php endif; ?>
     
     <div class="footer">
-      <div class="steps">
-        <div class="step step-1">Онлайн игра по мотивам книг и сериала “Игра престолов”</div>
-        <div class="step step-2">Стильная графика, великолепный саундтрек, разнообразный динамичный мультиплеер</div>
-        <div class="step step-3">Большой выбор оружия, с возможность модернизации</div>
-      </div>
+      <?php if($_GET['page'] != 'download'): ?>
       <div class="social">
-       <div class="facebook" onClick="vote('fb')">
-         <div class="text"><span>Я рекомендую</span></div>
-         <div class="num"><span id="fb_counter"><?php echo $_SESSION['war_face_fb_count'] ?></span></div>
-       </div>
-       <div class="vk" onClick="vote('vk')">
-         <div class="text"><span>Сохранить</span></div>
-         <div class="num"><span id="vk_counter"><?php echo $_SESSION['war_face_vk_count'] ?></span></div>
-       </div>
-       <div class="ok" onClick="vote('ok')">
-         <div class="ok-inner">
-           <div class="text">Нравится</div>
-           <div class="num" id="ok_counter"><?php echo $_SESSION['war_face_ok_count'] ?></div>
-         </div>
-       </div>
-       <div class="mailru" onClick="vote('mra')">
-         <div class="mailru-inner">
-           <div class="text">Нравится</div>
-           <div class="num" id="mra_counter"><?php echo $_SESSION['war_face_mra_count'] ?></div>
-         </div>
-       </div>
-       <div class="twitter" onClick="vote('twit')">
-         <div class="text"><span>Твитнуть</span></div>
-         <div class="num"><span id="twit_counter"><?php echo $_SESSION['war_face_twit_count'] ?></span></div>
-       </div>
+      <div class="separator"></div>
+      <img src="skins/<?php echo IRB_SKIN ?>/images/crytek.jpg" alt="">
+      <div class="social-cover">
+        <div class="facebook" onclick="vote('fb')">
+          <div class="text"><span>Я рекомендую</span></div>
+          <div class="num"><span id="fb_counter"><?php echo $_SESSION['throne_fb_count'] ?></span></div>
+        </div>
+        <div class="vk" onclick="vote('vk')">
+          <div class="text"><span>Сохранить</span></div>
+          <div class="num"><span id="vk_counter"><?php echo $_SESSION['throne_vk_count'] ?></span></div>
+        </div>
+        <div class="ok" onclick="vote('ok')">
+          <div class="ok-inner">
+          <div class="text">Нравится</div>
+          <div class="num" id="ok_counter"><?php echo $_SESSION['throne_ok_count'] ?></div>
+          </div>
+        </div>
+        <div class="mailru" onclick="vote('mra')">
+          <div class="mailru-inner">
+          <div class="text">Нравится</div>
+          <div class="num" id="mra_counter"><?php echo $_SESSION['throne_mra_count'] ?></div>
+          </div>
+        </div>
+        <div class="twitter" onclick="vote('twit')">
+          <div class="text"><span>Твитнуть</span></div>
+          <div class="num"><span id="twit_counter"><?php echo $_SESSION['throne_twit_count'] ?></span></div>
+        </div>
+      </div>
      </div>
-     <ul class="nav-bottom">
-	<li><a href="<?php echo src('?page=join&action=activate',''); ?>">Получить Контент</a></li>
-       <li><a href="/?page=control" target="_blank">Управление Подпиской на Контент</a></li>
-       <li><a href="/portal/rules.php" target="_blank">Правила предоставления Подписки на Контент</a></li>
-       <li><a href="/?page=mail" target="_blank">Обратная связь</a></li>
-       <li><a href="/?page=mail" target="_blank">Пожаловаться на спам (AntiSpam)</a></li>
-       <li><a href="#" onclick="javascript:window.open('/portal/rules_mts.php', 'popup', 'width=500,height=500,scrollbars=1');return false;">Стоимость услуги</a></li>
-     </ul>
+     <?php endif; ?>
      <div class="info">
+     <br /><br /><br /><br /><br />
        <p><?php echo FOOTER_M; ?></p>
      </div>
     </div>
