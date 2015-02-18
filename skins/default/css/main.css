@@ -118,7 +118,7 @@ input {
 	color: #5A6F79;
 	font-size: 12px;
 }
-.join-modal form input {
+.join-modal form input[type="text"] {
 	border-radius: 3px;
 	background-color:  #01080c;
 	box-shadow: 0px 1px 0px 0px rgba(177, 197, 207, 0.65);
@@ -151,6 +151,33 @@ input {
 	margin: 0 auto;
 	margin-top: 8px;
 	line-height: 20px;
+}
+.other .modal-head {
+	font-size: 13px;
+	margin-top: -2px;
+}
+.other .number-text, .other .agree {
+	color: #5A6F79;
+	margin-top: 10px;
+}
+.other .number-text a, .other .agree a {
+	color: #cc9c2c;
+}
+.other .agree input {
+	margin-top: 0;
+}
+.other form .play  {
+	margin-top: 24px;
+}
+.backward-links {
+	text-align: center;
+	color: #FFF200;
+	text-align: center;
+	margin-top: 10px;
+}
+.backward-links a {
+	color: #FF9F1E;
+	font: 700 14px Arial;
 }
 .content .links a {
 	margin-top: 55px;
