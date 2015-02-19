@@ -10,4 +10,7 @@
     </form>
     <div class="users-online"><span>2 356 789</span>  игроков онлайн</div>
   </div>
+  <div class="backward-links">
+    <div class="error"><?php echo $error ?></div>
+  </div>
 </div>
