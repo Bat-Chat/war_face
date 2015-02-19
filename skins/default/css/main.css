@@ -152,24 +152,66 @@ input {
 	margin-top: 8px;
 	line-height: 20px;
 }
-.other .modal-head {
+.other .modal-head, .sms .modal-head {
 	font-size: 13px;
 	margin-top: -2px;
 }
-.other .number-text, .other .agree {
+.number-text, .agree {
 	color: #5A6F79;
+	font: 15px Arial;
 	margin-top: 10px;
 }
-.other .number-text a, .other .agree a {
+.enter {
+	height: 290px;
+	position: relative;
+}
+.enter .message {
+	width: 270px;
+	margin: 80px auto;
+}
+.enter .message a {
 	color: #cc9c2c;
 }
-.other .agree input {
+.sms .number-text {
+ 	color: #5A6F79;
+	margin-top: 0px;
+}
+.sms form {
+	margin-top: 5px;
+}
+.sms form select {
+	width: 218px;
+	height: 19px;
+	margin-bottom: 10px;
+	font: 12px Arial;
+}
+.other a, .sms a {
+	color: #cc9c2c;
+}
+.other.black .modal-head {
+	margin-top: 0;
+	font-size: 12px;
+	line-height: 16px;
+}
+.other.black form {
+	margin-top: 12px;
+}
+.other.black .play {
+	margin-top: 10px;
+}
+.sms .number-text {
+	font-size: 14px;
+}
+.agree input {
 	margin-top: 0;
 }
 .other form .play  {
 	margin-top: 24px;
 }
 .backward-links {
+	font: 16px Arial;
+	width: 64%;
+	margin: 0 auto;
 	text-align: center;
 	color: #FFF200;
 	text-align: center;
@@ -178,6 +220,13 @@ input {
 .backward-links a {
 	color: #FF9F1E;
 	font: 700 14px Arial;
+}
+.backward-links span {
+	color: red;
+	font: 700 14px Arial;
+}
+.backward-links #text_rule {
+	color: #9cb4bc;
 }
 .content .links a {
 	margin-top: 55px;
@@ -244,7 +293,15 @@ input {
 	color: #cc9c2c;
 }
 .join-modal .users-online {
-	margin-top: 17px;
+	margin-top: 18px;
+}
+.sms .users-online {
+	margin-top: 13px;
+}
+.enter .users-online {
+	position: absolute;
+	bottom: 9px;
+	left: 410px;
 }
 .download-modal {
 	width: 79%;
@@ -255,11 +312,11 @@ input {
 	padding: 20px 20px 30px 20px;
 }
 .download-modal .text {
+	font: 16px Arial;
 	width: 58%;
 	margin-left: 5%;
 	margin-top: 28px;
 	float: left;
-	font-size: 16px;
 }
 .download-modal .image {
 	float: left;
@@ -273,7 +330,7 @@ input {
 	background: url(../images/soldiers.png) no-repeat 0px bottom;
 }
 .common-content .soldiers iframe {
-	margin-left: -4px;
+	margin-left: -6px;
 }
 .common-content .game-desc {
 	color: #c9d8dd;
@@ -540,7 +597,7 @@ input {
 	margin: 0 0 10px 0; 
 }
 
-.black {
+/*.black {
 	margin: 800px 0 0;
 	color: #17333E;
 	font-size: 10px;
@@ -563,7 +620,7 @@ input {
 .black + .nav-bottom li a {
 	font: 10px/12px Helvetica, Arial;
 	color: #17333E;
-}
+}*/
 
 /*----------------------------SOCIAL-----------------------*/
 .social {

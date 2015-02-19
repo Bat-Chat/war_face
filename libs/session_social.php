@@ -1,5 +1,4 @@
 <?php
-
 if (!isset($_SESSION['war_face_vk_count']))
 {
 	$_SESSION['war_face_vk_count'] = rand(10, 90);

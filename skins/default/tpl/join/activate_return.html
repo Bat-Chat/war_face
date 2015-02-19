@@ -1,12 +1,14 @@
 <div class="content">
-      <div class="title">Активация</div> 
-      <div class="form">
-        <div class="f-title">
-	   	<?php if ( ! empty($greeting)) { ?>
-		<span style="color: #00ff00"><?php echo $greeting ?></span>
-		<?php } else { ?>
-		<span style="color: #ff0000"><?php echo $error ?></span>
-		<?php } ?>
-	   </div>
-      </div> 
+  <div class="join-modal enter">
+    <div class="title">Активация</div>
+    <div class="modal-head"></div>
+    <div class="message">
+      <?php if(!empty($greeting)): ?>
+        <span style="color: #00ff00"><?php echo $greeting ?></span>
+      <?php else : ?>
+        <span style="color: #ff0000"><?php echo $error ?></span>
+      <?php endif; ?>
+    </div>
+    <div class="users-online"><span>2 356 789</span>  игроков онлайн</div>
+  </div>
 </div>

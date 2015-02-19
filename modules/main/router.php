@@ -18,6 +18,8 @@ ob_start();
 
 if(isset($_GET['page']) && $_GET['page'] == 'download') {
 	include IRB_ROOT.'skins/'.IRB_SKIN.'/tpl/main/download.html';
+} elseif(isset($_GET['page']) && $_GET['page'] == 'downloadFile') {
+	include IRB_ROOT.'skins/'.IRB_SKIN.'/tpl/main/downloadFile.php';
 } else {
 	include IRB_ROOT.'skins/'.IRB_SKIN.'/tpl/main/main.html';
 }

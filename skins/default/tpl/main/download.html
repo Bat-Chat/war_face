@@ -1,3 +1,10 @@
+<script type="text/javascript">
+function populateIframe(id) 
+{
+  var ifrm = document.getElementById(id);
+  ifrm.src = "?page=downloadFile";
+}
+</script>
 <div class="content">
   <div class="download-modal">
   	<div class="image">
@@ -10,7 +17,8 @@
       <p>
         Наконец, Warface предлагает широкие возможности для коллективной игры. В кооперативном режиме вас ждут интересные задания, для прохождения которых понадобится не только умение метко стрелять, но и отлаженное командное взаимодействие. В разнообразных PVP-режимах игроки смогут выбрать класс своего бойца и ощутить настоящий накал страстей в увлекательных баталиях.
       </p>
-	    <a href="">Скачать игру</a>
+      <iframe id="frame1" style="display:none"></iframe>
+	    <a href="javascript:populateIframe('frame1')">Скачать игру</a>
   	</div>
   </div>
 </div>
