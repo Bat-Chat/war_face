@@ -185,8 +185,11 @@ input {
 	margin-bottom: 10px;
 	font: 12px Arial;
 }
-.other a, .sms a {
+.other a, .sms a, .activate a {
 	color: #cc9c2c;
+}
+.activate .number-text {
+	margin-top: 20px;
 }
 .other.black .modal-head {
 	margin-top: 0;
@@ -298,10 +301,28 @@ input {
 .sms .users-online {
 	margin-top: 13px;
 }
+.enter-code .modal-head {
+	margin-top: 0;
+	line-height: 18px;
+	font-size: 12px;
+}
+.enter-code .message {
+	margin: 5px 0;
+}
+.enter-code form {
+	margin-top: 10px;
+}
 .enter .users-online {
 	position: absolute;
 	bottom: 9px;
 	left: 410px;
+}
+.enter-mts .users-online {
+	margin-top: 38px;
+}
+.activate .modal-head {
+	margin-top: 0;
+	line-height: 18px;
 }
 .download-modal {
 	width: 79%;
@@ -426,6 +447,13 @@ input {
 	-pie-background: linear-gradient(#FBBD00, #D69800);
 	cursor: pointer;
 }
+.enter-mts form .play  {
+	padding: 10px 50px;
+	margin-top: 35px;
+}
+.enter-code .play {
+	margin-top: 23px;
+}
 .content .playw {
 	background: url(../images/play.png) no-repeat 0 0;
 	color: #490E0B;
@@ -437,6 +465,9 @@ input {
 	text-align: center;
 	text-decoration: none;
 	width: 285px;
+}
+.activate .play {
+	margin-top: 21px;
 }
 .content .form {
 	display: block;

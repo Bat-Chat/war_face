@@ -1,60 +1,14 @@
 <div class="content">
-      <div class="title">Авторизация</div> 
-      <div class="form">
-        <div class="f-title">Для входа в закрытую часть введите <b>Номер телефона</b>, который Вы указывали при регистрации, и полученный вами <b>Код</b></div>
-	   <form action="" method="post" name="form" id="form">
-	   	<input type="hidden" name="enter" value="1" />
-          <div class="f-item f-first">
-            <label>Телефон</label>
-            <input type="text" name="number" value="+7" onkeypress="if (event.keyCode==13) {$('#form').submit(); return false;};" />
-            <div class="message">Например: +79991115566</div>
-          </div>
-		<div class="f-item">
-            <label>Код</label>
-            <input type="text" name="pincode" onkeypress="if (event.keyCode==13) {$('#form').submit(); return false;};" />
-          </div>
-		</form>
-      </div>
-      <a href="#" class="play continue" onclick="$('#form').submit(); return false;">Продолжить</a>
-    	<div class="error"><?php echo $error ?></div>
-      <div class="top-players">
-        <div class="top-title"></div>
-          <ul class="list">
-            <li>
-              <div class="name"><?php echo $_SESSION['war_face_players_top']['nicks'][0] ?></div>
-              <div class="phone">(<?php echo $_SESSION['war_face_players_top']['numbers'][0] ?>)</div>
-              <div class="score"><?php echo $_SESSION['war_face_players_top']['stars'][0] ?></div>
-              <div class="armor"><?php echo $_SESSION['war_face_players_top']['battles'][0] ?></div>
-              <div class="hours"><?php echo $_SESSION['war_face_players_top']['hours'][0] ?> ч</div>
-            </li>
-            <li>
-              <div class="name"><?php echo $_SESSION['war_face_players_top']['nicks'][1] ?></div>
-              <div class="phone">(<?php echo $_SESSION['war_face_players_top']['numbers'][1] ?>)</div>
-              <div class="score"><?php echo $_SESSION['war_face_players_top']['stars'][1] ?></div>
-              <div class="armor"><?php echo $_SESSION['war_face_players_top']['battles'][1] ?></div>
-              <div class="hours"><?php echo $_SESSION['war_face_players_top']['hours'][1] ?> ч</div>
-            </li>
-            <li>
-              <div class="name"><?php echo $_SESSION['war_face_players_top']['nicks'][2] ?></div>
-              <div class="phone">(<?php echo $_SESSION['war_face_players_top']['numbers'][2] ?>)</div>
-              <div class="score"><?php echo $_SESSION['war_face_players_top']['stars'][2] ?></div>
-              <div class="armor"><?php echo $_SESSION['war_face_players_top']['battles'][2] ?></div>
-              <div class="hours"><?php echo $_SESSION['war_face_players_top']['hours'][2] ?> ч</div>
-            </li>
-            <li>
-              <div class="name"><?php echo $_SESSION['war_face_players_top']['nicks'][3] ?></div>
-              <div class="phone">(<?php echo $_SESSION['war_face_players_top']['numbers'][3] ?>)</div>
-              <div class="score"><?php echo $_SESSION['war_face_players_top']['stars'][3] ?></div>
-              <div class="armor"><?php echo $_SESSION['war_face_players_top']['battles'][3] ?></div>
-              <div class="hours"><?php echo $_SESSION['war_face_players_top']['hours'][3] ?> ч</div>
-            </li>
-            <li>
-              <div class="name"><?php echo $_SESSION['war_face_players_top']['nicks'][4] ?></div>
-              <div class="phone">(<?php echo $_SESSION['war_face_players_top']['numbers'][4] ?>)</div>
-              <div class="score"><?php echo $_SESSION['war_face_players_top']['stars'][4] ?></div>
-              <div class="armor"><?php echo $_SESSION['war_face_players_top']['battles'][4] ?></div>
-              <div class="hours"><?php echo $_SESSION['war_face_players_top']['hours'][4] ?> ч</div>
-            </li>
-          </ul>
-      </div>   
+  <div class="join-modal enter-code">
+    <div class="title">Авторизация</div>
+    <div class="modal-head">Для входа в закрытую часть введите <b>Номер телефона</b>, который Вы указывали при регистрации, и полученный вами <b>Код</b></div>
+    <form action="" method="post" name="form" id="form">
+      <input type="hidden" name="enter" value="1" />
+      <input type="text" name="number" placeholder="Телефон" onkeypress="if (event.keyCode==13) {$('#form').submit(); return false;};" /><br />
+      <div class="message">Например: +7 999 111 55 66</div>
+      <input type="text" name="pincode" placeholder="Код" onkeypress="if (event.keyCode==13) {$('#form').submit(); return false;};" /><br>
+      <a href="#" class="play" onclick="$('#form').submit(); return false;">Продолжить</a>
+    </form>
+    <div class="users-online"><span>2 356 789</span>  игроков онлайн</div>
+  </div>
 </div>
