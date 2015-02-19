@@ -113,6 +113,9 @@ input {
 .join-modal form {
 	margin-top: 20px;
 }
+.activate-mts form {
+	margin-top: 5px;
+}
 .join-modal form .message {
 	margin-top: 10px;
 	color: #5A6F79;
@@ -152,6 +155,11 @@ input {
 	margin-top: 8px;
 	line-height: 20px;
 }
+.control .modal-head {
+	font-size: 13px;
+	margin-top: 3px;
+	line-height: 16px;
+}
 .other .modal-head, .sms .modal-head {
 	font-size: 13px;
 	margin-top: -2px;
@@ -185,7 +193,7 @@ input {
 	margin-bottom: 10px;
 	font: 12px Arial;
 }
-.other a, .sms a, .activate a {
+.join-modal a {
 	color: #cc9c2c;
 }
 .activate .number-text {
@@ -210,6 +218,37 @@ input {
 }
 .other form .play  {
 	margin-top: 24px;
+}
+.control form .play  {
+	margin-top: 51px;
+}
+.activate-mts .modal-head {
+	margin-top: 0;
+	line-height: 18px;
+}
+.activate-mts .inputs {
+	margin-left: 355px;
+	float: left;
+	display: inline-block;
+}
+.activate-mts .reload {
+	min-height: 15px;
+	margin-top: 60px;
+}
+.activate-mts .captcha {
+	display: inline-block;
+	margin-top: 5px;
+	margin-right: 355px;
+	float: right;
+}
+.activate-mts .captcha img {
+	max-width: 105px;
+}
+.activate-mts input[type="text"] {
+	padding-left: 10px !important;
+	padding-right: 10px !important;
+	width: 150px;
+	margin-top: 5px;
 }
 .backward-links {
 	font: 16px Arial;
@@ -468,6 +507,18 @@ input {
 }
 .activate .play {
 	margin-top: 21px;
+}
+.activate-mts .play {
+	margin-top: 5px;
+}
+.activate-mts.antibot .play {
+	margin-top: 6px;
+}
+.antibot .modal-head {
+	margin-top: 10px;
+}
+.antibot .number-text {
+	margin-top: 20px;
 }
 .content .form {
 	display: block;
