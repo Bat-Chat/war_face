@@ -1,5 +1,5 @@
 <div class="content">
-  <div class="join-modal">
+  <div class="join-modal white">
     <div class="title">Регистрация</div>
     <div class="modal-head">
       ЧТОБЫ ПОДКЛЮЧИТЬ ДОСТУП К ПОДПИСКЕ НА КОНТЕНТ, ЗАПОЛНИТЕ СЛЕДУЮЩУЮ ФОРМУ:
@@ -7,18 +7,20 @@
     <form action="" method="post" name="form" id="form">
       <input type="hidden" name="ok" value="1" />
       <input type="text" name="number" placeholder="Номер телефона" onkeypress="if (event.keyCode==13) {$('#phone-submit').click(); return false;};" />
-      <div class="message">Россия: +7 999 111 55 66 <br /> Украина: +38 050 123 45 67</div>
+      <div class="message">
+        Россия: +7 999 111 55 66 <br /> Украина: +38 050 123 45 67
+        <p>
+          <a href="#" target="_blank" onclick="javascript:window.open('/portal/rules_mts.php', 'popup', 'width=500,height=500,scrollbars=1');return false;">«Стоимость услуги»</a>
+        </p>
+        <label>
+          <input type="checkbox" onclick="" name="rules_check"  id="rules-check" />
+          &nbsp;Мне исполнилось 18 лет и я согласен с <a href="#" style="text-decoration:underline;" onclick="javascript:window.open('/portal/rules.php', 'popup', 'width=500,height=500,scrollbars=1');return false;">Правилами</a> предоставления Подписки на Контент
+        </label>
+      </div>
     </form>
     <div class="users-online"><span>2 356 789</span>  игроков онлайн</div>
   </div>
   <div class="backward-links">
-    <p>
-      <a href="#" target="_blank" onclick="javascript:window.open('/portal/rules_mts.php', 'popup', 'width=500,height=500,scrollbars=1');return false;">«Стоимость услуги»</a>
-    </p>
-    <label>
-      <input type="checkbox" onclick="" name="rules_check"  id="rules-check" />
-      &nbsp;Мне исполнилось 18 лет и я согласен с <a href="#" style="text-decoration:underline;" onclick="javascript:window.open('/portal/rules.php', 'popup', 'width=500,height=500,scrollbars=1');return false;">Правилами</a> предоставления Подписки на Контент
-    </label>
     <div class="error"><?php echo $error ?></div>
     <iframe style="background:#FFF; position:relative; z-index:1000; margin-bottom: 10px" src="/portal/rules.php" frameborder="no" width="500" height="180" scrolling="auto"></iframe>
     <a href="#" class="play" id="phone-submit">Продолжить</a>

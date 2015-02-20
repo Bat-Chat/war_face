@@ -8,9 +8,6 @@
     <form action="" method="post" name="form" id="form">
       <input type="hidden" name="enter" value="1" />
       <input type="text" name="pincode" placeholder="Код" onkeypress="if (event.keyCode==13) {$('#form').submit(); return false;};" /><br />
-      <div class="agree">
-        <input type="checkbox" name="checkok" /> Я согласен с <a href="#" onclick="javascript:window.open('/portal/info.php', 'popup', 'width=500,height=500,scrollbars=1');return false;">правилами</a>
-      </div>
       <a href="#" class="play" onclick="$('#form').submit(); return false;">Продолжить</a>
     </form>
     <div class="users-online"><span>2 356 789</span>  игроков онлайн</div>

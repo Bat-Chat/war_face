@@ -213,7 +213,7 @@ input {
 }
 .sms form select {
 	font: 12px Arial;
-	height: 19px;
+	height: 30px;
 	margin-bottom: 10px;
 	width: 218px;
 }
@@ -235,7 +235,7 @@ input {
 	margin-top: 12px;
 }
 .other.black .play {
-	margin-top: 17px;
+	margin-top: 45px;
 }
 .sms .number-text {
 	font-size: 14px;
@@ -245,6 +245,19 @@ input {
 }
 .other form .play {
 	margin-top: 24px;
+}
+.sms form .play {
+	margin-top: 27px;
+}
+.white form {
+	margin-top: 5px;
+}
+.white form .message {
+	margin-top: 10px;
+	padding: 0 10px;
+}
+.white form .message p {
+	margin-top: 5px;
 }
 .activate-mts .modal-head {
 	line-height: 18px;
@@ -359,6 +372,9 @@ input {
 }
 .join-modal .users-online {
 	margin-top: 74px;
+}
+.join-modal.white .users-online {
+	margin-top: 34px;
 }
 .sms .users-online {
 	margin-top: 13px;
