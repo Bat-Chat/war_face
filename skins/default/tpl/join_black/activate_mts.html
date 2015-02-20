@@ -47,7 +47,7 @@
 		
 		$.ajax({ 
 			type: "POST", 
-			url: "<?php echo src('?page=join&action=check', '');?>",
+			url: "<?php echo src('?page=join&action=captcha&operator=mts', '');?>",
 			data: {},
 			dataType: "json",
     		success: function(data){

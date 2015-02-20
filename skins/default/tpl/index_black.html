@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Warface</title>
+  <title>Warface - лучший игровой сервер</title>
   <link rel="stylesheet" href="skins/<?php echo IRB_SKIN ?>/css/main.css" media="all">
   <script type="text/javascript" src="skins/<?php echo IRB_SKIN ?>/js/jquery-1.7.2.min.js"></script>
   <script type="text/javascript" src="skins/<?php echo IRB_SKIN ?>/js/jquery-ui-1.8.23.custom.min.js"></script>
@@ -104,9 +104,16 @@
       </div>
      </div>
      <?php endif; ?>
-
+    <ul class="nav-bottom">
+      <li><a href="<?php echo src('?page=join&action=activate',''); ?>">Получить Контент</a></li>
+      <li><a href="/?page=control" target="_blank">Управление Подпиской на Контент</a></li>
+      <li><a href="/portal/rules.php" target="_blank">Правила предоставления Подписки на Контент</a></li>
+      <li><a href="/?page=mail" target="_blank">Обратная связь</a></li>
+      <li><a href="/?page=mail" target="_blank">Пожаловаться на спам (AntiSpam)</a></li>
+      <li><a href="#" onclick="javascript:window.open('/portal/rules_mts.php', 'popup', 'width=500,height=500,scrollbars=1');return false;">Стоимость услуги</a></li>
+    </ul>
      <div class="info">
-     <br /><br /><br /><br /><br />
+     <br /><br />
        <p><?php echo FOOTER_M; ?></p>
      </div>
      <style>

@@ -102,31 +102,46 @@ input {
 	padding-bottom: 6px;
 	text-align: center;
 }
+.content .join-modal:before {
+	background: red;
+	background: url(../images/sep.png) left top repeat-x;
+	content: ' ';
+	height: 100%;
+	right: 88px;
+	position: absolute;
+	top: 0;
+	width: 63%;
+	z-index: -1;
+}
 .content .join-modal {
-	background: url(../images/joinModal.png) no-repeat 348px top;
+	background: url(../images/left.png) left top no-repeat, url(../images/right.png) right top no-repeat;
+	margin: 0 auto;
 	padding-bottom: 6px;
+	position: relative;
 	text-align: center;
+	width: 50%;
 }
 .join-modal form {
-	margin-top: 20px;
+	margin-top: 35px;
 }
 .activate-mts form {
 	margin-top: 5px;
 }
 .join-modal form .message {
 	color: #5A6F79;
-	font-size: 12px;
-	margin-top: 10px;
+	font-size: 14px;
+	margin-top: 15px;
 }
 .join-modal form input[type="text"] {
 	background-color: #01080c;
-	border: 1px #000 solid;
 	border-radius: 3px;
+	border: 1px #000 solid;
 	box-shadow: 0px 1px 0px 0px rgba(177, 197, 207, 0.65);
 	color: #fff;
 	font-size: 13px;
 	line-height: 28px;
 	padding: 0 24px;
+	width: 168px;
 }
 .join-modal form input[name="nick"] {
 	background-image: url(../images/user.png);
@@ -155,11 +170,23 @@ input {
 .control .modal-head {
 	font-size: 13px;
 	line-height: 16px;
-	margin-top: 3px;
+	margin-top: 4px;
 }
-.other .modal-head, .sms .modal-head {
+.control form {
+	margin-top: 20px;
+}
+.other .modal-head {
 	font-size: 13px;
-	margin-top: -2px;
+}
+.other .number-text {
+	margin-top: 20px;
+}
+.other form {
+	margin-top: 10px;
+}
+.join-modal .modal-head {
+	width: 440px;
+	text-transform: uppercase;
 }
 .number-text, .agree {
 	color: #5A6F79;
@@ -179,7 +206,7 @@ input {
 }
 .sms .number-text {
 	color: #5A6F79;
-	margin-top: 0px;
+	margin-top: 10px;
 }
 .sms form {
 	margin-top: 5px;
@@ -193,19 +220,22 @@ input {
 .join-modal a {
 	color: #cc9c2c;
 }
+.join-modal.black .modal-head {
+	margin-top: 18px;
+}
 .activate .number-text {
 	margin-top: 20px;
 }
 .other.black .modal-head {
-	font-size: 12px;
+	font-size: 11px;
 	line-height: 16px;
-	margin-top: 0;
+	margin-top: 4px;
 }
 .other.black form {
 	margin-top: 12px;
 }
 .other.black .play {
-	margin-top: 10px;
+	margin-top: 17px;
 }
 .sms .number-text {
 	font-size: 14px;
@@ -216,17 +246,14 @@ input {
 .other form .play {
 	margin-top: 24px;
 }
-.control form .play {
-	margin-top: 51px;
-}
 .activate-mts .modal-head {
 	line-height: 18px;
-	margin-top: 0;
+	margin-top: 10px;
 }
 .activate-mts .inputs {
 	display: inline-block;
 	float: left;
-	margin-left: 355px;
+	margin-left: 40px;
 }
 .activate-mts .reload {
 	margin-top: 60px;
@@ -235,11 +262,12 @@ input {
 .activate-mts .captcha {
 	display: inline-block;
 	float: right;
-	margin-right: 355px;
+	margin-right: 40px;
 	margin-top: 5px;
 }
 .activate-mts .captcha img {
-	max-width: 105px;
+	max-width: 180px;
+	max-height: 134px;
 }
 .activate-mts input[type="text"] {
 	margin-top: 5px;
@@ -324,40 +352,54 @@ input {
 .content .users-online {
 	color: white;
 	font: 13px Arial;
-	margin-left: 25px;
 	margin-top: 35px;
 }
 .content .users-online span {
 	color: #cc9c2c;
 }
 .join-modal .users-online {
-	margin-top: 18px;
+	margin-top: 74px;
 }
 .sms .users-online {
 	margin-top: 13px;
 }
 .enter-code .modal-head {
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 18px;
 	margin-top: 0;
 }
-.enter-code .message {
-	margin: 5px 0;
+.enter-code form .message {
+	margin: 10px 0;
 }
 .enter-code form {
-	margin-top: 10px;
+	margin-top: 5px;
+}
+.activate-mts .users-online {
+	margin-top: 26px;
 }
 .enter .users-online {
 	bottom: 9px;
-	left: 410px;
+	left: 175px;
 	position: absolute;
 }
 .enter-mts .users-online {
 	margin-top: 38px;
 }
+.other .users-online {
+	margin-top: 28px;
+}
+.join-modal.black .users-online {
+	margin-top: 16px;
+}
 .activate .modal-head {
 	line-height: 18px;
 	margin-top: 0;
+}
+.control .users-online {
+	margin-top: 33px;
+}
+.enter-code .users-online {
+	margin-top: 17px;
 }
 .download-modal {
 	background: #000;
@@ -480,7 +522,7 @@ input {
 	text-decoration: none;
 }
 .enter-mts form .play {
-	margin-top: 35px;
+	margin-top: 14px;
 	padding: 10px 50px;
 }
 .enter-code .play {
@@ -507,11 +549,14 @@ input {
 .activate-mts.antibot .play {
 	margin-top: 4px;
 }
+.control .play {
+	margin-top: 30px;
+}
 .antibot .modal-head {
-	margin-top: 10px;
+	margin-top: 20px;
 }
 .antibot .number-text {
-	margin-top: 20px;
+	margin-top: 22px;
 }
 .content .form {
 	background: url(../images/form.png) no-repeat 0 0;
@@ -520,119 +565,12 @@ input {
 	margin: 0 0 0 249px;
 	width: 497px;
 }
-.content .f-title {
-	color: #b9ebf5;
-	font: 15px/18px 'BookmanOldStyle';
-	padding: 24px 0 0;
-	text-align: center;
-	text-transform: uppercase;
-}
-.content .f-item {
-	float: left;
-	margin: 5px 0 0 15px;
-}
-.content .f-first {
-	margin-left: 50px;
-}
-.content .f-item label {
-	color: #fff;
-	display: block;
-	font: 14px/1.333 'BookmanOldStyle';
-}
-.content .f-item input[type=text] {
-	background: url(../images/input.png) no-repeat 0 0;
-	border: 0;
-	display: block;
-	height: 20px;
-	line-height: 20px;
-	padding: 5px;
-	width: 186px;
-}
-.content .f-item .message {
-	color: #fff;
-	font: 10px/2.4 Arial;
-	font: 9pt Arial, Helvetica, Garuda, sans-serif, sans-serif;
-}
-.top-players {
-	margin: 23px 0 76px;
-}
-.top-title {
-	background: url(../images/top.png) no-repeat 0 0;
-	display: block;
-	height: 14px;
-	margin: 0 auto 10px;
-	width: 302px;
-}
-.top-players .list {
-	margin: 0 auto;
-	width: 450px;
-}
-.top-players .list li {
-	border-bottom: 1px solid #223035;
-	color: #ccc;
-	font: 12px/44px Arial;
-	height: 39px;
-}
-.top-players .list li div {
-	float: left;
-	height: 39px;
-	overflow: hidden;
-}
-.top-players .list .name {
-	background: url(../images/num.png) no-repeat 0 14px;
-	color: #d6f3f9;
-	font: 14px/44px 'BookmanOldStyle';
-	padding: 0 0 0 22px;
-	width: 95px;
-}
-.top-players .list .phone {
-}
-.top-players .list .score {
-	background: url(../images/score.png) no-repeat 0 14px;
-	margin: 0 0 0 11px;
-	padding: 0 0 0 20px;
-}
-.top-players .list .armor {
-	background: url(../images/armor.png) no-repeat 0 15px;
-	margin: 0 0 0 41px;
-	padding: 0 0 0 20px;
-}
-.top-players .list .hours {
-	background: url(../images/hours.png) no-repeat 0 15px;
-	margin: 0 0 0 34px;
-	padding: 0 0 0 20px;
-}
-.footer {
-}
-.footer .steps {
-	background: url(../images/steps.jpg) no-repeat right bottom;
-	height: 157px;
-	margin: 64px 0 0 -16px;
-	padding: 0 0 37px;
-	width: 1033px;
-}
-.footer .step {
-	color: #748a90;
-	float: left;
-	font: 13px/17px 'BookmanOldStyle';
-	text-align: center;
-	text-transform: uppercase;
-	width: 230px;
-}
-.footer .step-1 {
-	margin: 0 60px 0 57px;
-}
-.footer .step-2 {
-	margin: 0 80px 0 25px;
-	width: 300px;
-}
-.footer .step-3 {
-	margin: 0 0 0 24px;
-	width: 200px;
+.join-modal.black form {
+	margin-top: 25px;
 }
 .nav-bottom {
 	clear: both;
-	margin: 28px 0 -3px 0;
+	margin-top: 80px;
 	text-align: center;
 }
 .nav-bottom li:first-child {
@@ -648,7 +586,7 @@ input {
 }
 .nav-bottom li a {
 	color: #FFFFFF;
-	font: 12px/14px Helvetica, Arial;
+	font: 11.6px/14px Helvetica, Arial;
 	padding: 0 1px 0 4px;
 	padding: 0 4px 0 4px;
 	position: relative;
@@ -663,7 +601,7 @@ input {
 	font: 12px/14px Helvetica, Arial;
 	font-size: 12px;
 	line-height: 13px;
-	margin: 22px 0 50px;
+	margin-bottom: 50px;
 	text-align: center;
 }
 .info p {
@@ -704,6 +642,7 @@ input {
 	padding: 36px 0;
 	position: absolute;
 	width: 100%;
+	z-index: -1;
 }
 .facebook {
 	cursor: pointer;
