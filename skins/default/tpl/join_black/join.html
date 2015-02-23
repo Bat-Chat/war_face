@@ -1,3 +1,12 @@
+<script>
+  $( document ).ready(function() {
+    $(document).bind("ajaxSend", function(){
+      $('.play').hide();
+    }).bind("ajaxComplete", function(){
+      $('.play').show();
+    });
+  });
+</script>
 <div class="content">
   <div class="join-modal black">
     <div class="title">Регистрация</div>
@@ -7,20 +16,11 @@
       <input type="text" name="nick" placeholder="Игровой ник" /><br>
       <input type="text" name="number" placeholder="Телефон" onkeypress="if (event.keyCode==13) {$('#phone-submit').click(); return false;};" />
       <div class="message">Россия: +7 999 111 55 66 <br /> Украина: +38 050 123 45 67</div>
-      <a href="#" class="play" id="phone-submit">Продолжить</a>
+      <a href="#" class="play" onclick="formSubmit(); return false">Продолжить</a>
+      <div class="form_links" id="preloader"><img src="skins/<?php echo IRB_SKIN ?>/images/preloader.gif" /></div>
     </form>
   </div>
   <div class="backward-links">
     <div class="error" id="error_load"><?php echo $error ?></div>
   </div> 
 </div>
-<script type="text/javascript">
- 
-    var button = $('#phone-submit');
-    var check = $('#rules-check');
-
-    button.click( function()
-    {
-      document.form.submit();
-    });
-</script>

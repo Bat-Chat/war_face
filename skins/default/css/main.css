@@ -234,15 +234,15 @@ input {
 	margin-top: 20px;
 }
 .other.black .modal-head {
-	font-size: 11px;
-	line-height: 16px;
-	margin-top: 4px;
+	font-size: 14px;
+	line-height: 17px;
+	margin-top: 0px;
 }
 .other.black form {
 	margin-top: 12px;
 }
 .other.black .play {
-	margin-top: 45px;
+	margin-top: 30px;
 }
 .sms .number-text {
 	font-size: 14px;
@@ -445,9 +445,10 @@ input {
 .download-modal {
 	background: #000;
 	color: #c9d8dd;
-	margin: 0 auto;
+	margin-bottom: 0;
 	margin-bottom: 100px;
-	padding: 20px 20px 30px 20px;
+	margin: 0 auto;
+	padding: 20px 20px 0px 20px;
 	width: 79%;
 }
 .download-modal .text {
@@ -618,7 +619,7 @@ input {
 	border: none;
 }
 .nav-bottom li {
-	border-left: 1px solid #D1D1D1;
+	border-left: 1px solid #222;
 	display: inline;
 	display: inline-block;
 	height: 14px;

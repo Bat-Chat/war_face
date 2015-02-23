@@ -60,7 +60,7 @@ function populateIframe(id)
         if (isset($_SESSION['vhod'])) {
           $href = 'javascript:populateIframe(\'frame1\')';
         } else {
-          $href = '?page=join';
+          $href = src('?page=join', '');
         }
       ?>
 	    <a href="<?= $href ?>">Скачать игру</a>

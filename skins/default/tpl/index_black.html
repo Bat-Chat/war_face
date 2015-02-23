@@ -27,10 +27,10 @@
     
     <?php echo $content ?>
 
-    <?php if($_GET['page'] != 'download'): ?>
+    <?php if($_GET['page'] != 'member'): ?>
     <div class="common-content">
       <div class="soldiers">
-        <iframe width="429" height="249" src="https://www.youtube.com/embed/mdUrDtfP76k?list=PLRBt_22JHfEyZdExCn9g3fH0JQEXX1qeQ" frameborder="0" allowfullscreen></iframe>
+        <iframe width="429" height="249" src="https://www.youtube.com/embed/10RZ_fsq-m0" frameborder="0" allowfullscreen></iframe>
       </div>
       <div class="game-desc">
         <p>
@@ -72,7 +72,7 @@
     <?php endif; ?>
     
     <div class="footer">
-      <?php if($_GET['page'] != 'download'): ?>
+      <?php if($_GET['page'] != 'member'): ?>
       <div class="social">
       <div class="separator"></div>
       <img src="skins/<?php echo IRB_SKIN ?>/images/crytek.jpg" alt="">
@@ -104,6 +104,7 @@
       </div>
      </div>
      <?php endif; ?>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <ul class="nav-bottom">
       <li><a href="<?php echo src('?page=join&action=activate',''); ?>">Получить Контент</a></li>
       <li><a href="/?page=control" target="_blank">Управление Подпиской на Контент</a></li>
@@ -112,13 +113,13 @@
       <li><a href="/?page=mail" target="_blank">Пожаловаться на спам (AntiSpam)</a></li>
       <li><a href="#" onclick="javascript:window.open('/portal/rules_mts.php', 'popup', 'width=500,height=500,scrollbars=1');return false;">Стоимость услуги</a></li>
     </ul>
+    <br /><br />
      <div class="info">
-     <br /><br />
        <p><?php echo FOOTER_M; ?></p>
      </div>
      <style>
-    .footer .nav-bottom li a{ font-size:10px; color:#999; }
-    .footer .info p { font-size:10px; color:#999;}
+    .footer .nav-bottom li a{ font-size:10px; color:#222; }
+    .footer .info p { font-size:10px; color:#222;}
     </style>
     </div>
   </div>

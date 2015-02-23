@@ -18,7 +18,7 @@
 	switch($GET['page'])  
    	{
    		case 'downloadFile':
-			include IRB_ROOT.'skins/'.IRB_SKIN.'/tpl/main/downloadFile.php';
+	   		include IRB_ROOT.'/libs/downloadFile.php';
 			exit();
 	   	break;
 

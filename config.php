@@ -16,7 +16,7 @@
 //                  ОбЩИЕ НАСТРОЙКИ
 ///////////////////////////////////////////////////////////////
     define('FOLDER',  'limonbucks.com'); // папка с сайтом
-    define('PATH',  'warface/'); // путь до сайта
+    define('PATH',  'warface'); // путь до сайта
 	define('RETURN_URL',  'http://' . $_SERVER['HTTP_HOST'] . '/'.PATH .'?page=join&action=enter'); // возвратный урл после окон операторов
 	define('PARTNER_PATH', '/home/sites/'. FOLDER . '/web/'); // путь к папке с партнеркой	
 	define('PROCESSING_PATH', '/home/sites/'. FOLDER . '/web/processing_types/'); // путь к папке с общими скриптами
