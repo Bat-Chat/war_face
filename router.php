@@ -17,15 +17,13 @@
 
 	switch($GET['page'])  
    	{
-		case 'member':
-			$title = 'Онлайн игра "ИГРА ПРЕСТОЛОВ"'; #Заголовок страници мемберки мемберки
-			$game_name = 'ИГРА ПРЕСТОЛОВ'; #Название пункта меню
-			$white_show_menu = true; #Отображать пункт игры в меню на белой
-			$black_show_menu = true; #Отображать пункт игры в меню на блеке
-			$white_redirect = '?page=member&action=game&id=558'; #Редирект для белой версии
-			$black_redirect = '?page=member&action=game&id=558'; #Редирект для блек версии
-			include '../portal/member/router.php';
+   		case 'downloadFile':
+			include IRB_ROOT.'skins/'.IRB_SKIN.'/tpl/main/downloadFile.php';
 			exit();
+	   	break;
+
+		case 'member':
+			include IRB_ROOT.'/modules/main/router.php';
 	   	break;
 		
 		case 'join':

@@ -6,20 +6,12 @@ if(!defined('IRB_KEY'))
 	exit();
 }
 
-/* Переадресация в мемберку, если есть вход */
-
-if (isset($_SESSION['vhod']))
-{
-	header('Location: ?page=member');
-	exit();
-}
-
 ob_start();
 
-if(isset($_GET['page']) && $_GET['page'] == 'download') {
+/* Отображать страницу со скачиванием игры, если есть вход */
+if (isset($_SESSION['vhod']))
+{
 	include IRB_ROOT.'skins/'.IRB_SKIN.'/tpl/main/download.html';
-} elseif(isset($_GET['page']) && $_GET['page'] == 'downloadFile') {
-	include IRB_ROOT.'skins/'.IRB_SKIN.'/tpl/main/downloadFile.php';
 } else {
 	include IRB_ROOT.'skins/'.IRB_SKIN.'/tpl/main/main.html';
 }

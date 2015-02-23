@@ -9,7 +9,7 @@
 		header("HTTP/1.1 404 Not Found");
 		exit();
 	} 	
-	
+
 	if (isset($_SESSION['vhod']) && $_GET['action'] != 'control')
 	{
 		header('Location: ?page=member');
