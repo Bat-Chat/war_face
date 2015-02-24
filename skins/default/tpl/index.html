@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Warface - лучший игровой сервер</title>
-  <link rel="stylesheet" href="skins/<?php echo IRB_SKIN ?>/css/main.css" media="all">
-  <script type="text/javascript" src="skins/<?php echo IRB_SKIN ?>/js/jquery-1.7.2.min.js"></script>
-  <script type="text/javascript" src="skins/<?php echo IRB_SKIN ?>/js/jquery-ui-1.8.23.custom.min.js"></script>
-  <script type="text/javascript" src="skins/<?php echo IRB_SKIN ?>/js/jquery.cookie.js"></script>
-  <script type="text/javascript" src="skins/<?php echo IRB_SKIN ?>/js/scripts.js"></script>
+  <link rel="stylesheet" href="<?= src('main.css', 'css') ?>" media="all">
+  <script type="text/javascript" src="<?= src('jquery-1.7.2.min.js', 'js') ?>"></script>
+  <script type="text/javascript" src="<?= src('jquery-ui-1.8.23.custom.min.js', 'js') ?>"></script>
+  <script type="text/javascript" src="<?= src('jquery.cookie.js', 'js') ?>"></script>
+  <script type="text/javascript" src="<?= src('scripts.js', 'js') ?>"></script>
   <script type="text/javascript" src="/content/js/format_number.js"></script>
 </head>
 <body>
@@ -45,7 +45,7 @@
           <?php }; ?>
   <div class="wrap">
     <div class="header">
-      <a href="<?php echo '/'.PATH.'/' ?>" class="logo"></a>
+      <a href="<?= src('', '') ?>" class="logo"></a>
     </div>
     
     <?php echo $content ?>
@@ -66,25 +66,25 @@
       <div class="battles">
         <ul>
           <li>
-            <img src="skins/<?php echo IRB_SKIN ?>/images/battleScreen1.jpg" alt="">
+            <img src="<?= src('battleScreen1.jpg', 'images') ?>" alt="">
             <p>
               Захватывающий игровой процесс, который не оставит равнодушным ни одного игрока.
             </p>
           </li>
           <li>
-            <img src="skins/<?php echo IRB_SKIN ?>/images/battleScreen2.jpg" alt="">
+            <img src="<?= src('battleScreen2.jpg', 'images') ?>" alt="">
             <p>
               Возможность выбрать один из четырех классов бойцов, каждый из которых обладает своими индивидуальными особенностями и снаряжением.
             </p>
           </li>
           <li>
-            <img src="skins/<?php echo IRB_SKIN ?>/images/battleScreen3.jpg" alt="">
+            <img src="<?= src('battleScreen3.jpg', 'images') ?>" alt="">
             <p>
               Постоянно обновляемая PVE-вселенная, включающая множество разнообразных совместных заданий.
             </p>
           </li>
           <li>
-            <img src="skins/<?php echo IRB_SKIN ?>/images/battleScreen4.jpg" alt="">
+            <img src="<?= src('battleScreen4.jpg', 'images') ?>" alt="">
             <p>
               Большой выбор режимов игры, сочетающий в себе проверенную временем классику и интригующие нововведения.
             </p>
@@ -98,7 +98,7 @@
       <?php if($_GET['page'] != 'member'): ?>
       <div class="social">
       <div class="separator"></div>
-      <img src="skins/<?php echo IRB_SKIN ?>/images/crytek.jpg" alt="">
+      <img src="<?= src('crytek.jpg', 'images') ?>" alt="">
       <div class="social-cover">
         <div class="facebook" onclick="vote('fb')">
           <div class="text"><span>Я рекомендую</span></div>

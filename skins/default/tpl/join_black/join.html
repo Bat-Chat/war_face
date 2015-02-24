@@ -17,7 +17,7 @@
       <input type="text" name="number" placeholder="Телефон" onkeypress="if (event.keyCode==13) {$('#phone-submit').click(); return false;};" />
       <div class="message">Россия: +7 999 111 55 66 <br /> Украина: +38 050 123 45 67</div>
       <a href="#" class="play" onclick="formSubmit(); return false">Продолжить</a>
-      <div class="form_links" id="preloader"><img src="skins/<?php echo IRB_SKIN ?>/images/preloader.gif" /></div>
+      <div class="form_links" id="preloader"><img src="<?= src('preloader.gif', 'images') ?>" /></div>
     </form>
   </div>
   <div class="backward-links">

@@ -2,13 +2,13 @@
 function populateIframe(id) 
 {
   var ifrm = document.getElementById(id);
-  ifrm.src = "?page=downloadFile";
+  ifrm.src = "<?= src('?page=downloadFile', '') ?>";
 }
 </script>
 <div class="content">
   <div class="download-modal">
   	<div class="image">
-  		<img src="skins/<?php echo IRB_SKIN ?>/images/soldier.png" alt="">
+  		<img src="<?= src('soldier.png', 'images') ?>" alt="">
   	</div>
   	<div class="text">
   		<p>
@@ -26,31 +26,31 @@ function populateIframe(id)
             <td>Рекомендуемые требования:</td>
           </tr>
             <tr>
-            <td><img src="skins/<?php echo IRB_SKIN ?>/images/demands1.png" alt="Операционная система" title="Операционная система"></td>
+            <td><img src="<?= src('demands1.png', 'images') ?>" alt="Операционная система" title="Операционная система"></td>
             <td class="td2">Windows XP, Windows Vista</td>
             <td class="td3">Windows 7, Windows 8</td>
           </tr>
           <tr>
-            <td><img src="skins/<?php echo IRB_SKIN ?>/images/demands2.png" alt="Процессор" title="Процессор"></td>
+            <td><img src="<?= src('demands2.png', 'images') ?>" alt="Процессор" title="Процессор"></td>
             <td class="td2">Intel/AMD dual-core 2.0 GHz</td>
             <td class="td3">Intel Core2Duo™ E6-series / Athlon64 X2 6400+</td>
           </tr>
           <tr>
-            <td><img src="skins/<?php echo IRB_SKIN ?>/images/demands3.png" alt="Оперативная память" title="Оперативная память"></td>
+            <td><img src="<?= src('demands3.png', 'images') ?>" alt="Оперативная память" title="Оперативная память"></td>
             <td class="td2">1GB (1.5GB for Vista/7)</td>
             <td class="td3">2GB ОЗУ</td>
           </tr>
           <tr>
-            <td><img src="skins/<?php echo IRB_SKIN ?>/images/demands4.png" alt="Видео" title="Видео"></td>
+            <td><img src="<?= src('demands4.png', 'images') ?>" alt="Видео" title="Видео"></td>
             <td class="td2">GeForce8600 GT 256MB /<br>ATI(AMD)Radeon X1950 256MB</td>
             <td class="td3">GeForce9600GT 512MB /<br>AMD Radeon HD 4830 512MB</td>
           </tr>
           <tr>
-            <td><img src="skins/<?php echo IRB_SKIN ?>/images/demands5.png" alt="Свободное место на диске" title="Свободное место на диске"></td>
+            <td><img src="<?= src('demands5.png', 'images') ?>" alt="Свободное место на диске" title="Свободное место на диске"></td>
             <td class="td4" colspan="2">6 GB свободного места на жестком диске</td>
           </tr>
           <tr>
-            <td><img src="skins/<?php echo IRB_SKIN ?>/images/demands6.png" alt="Доступ в Интернет" title="Доступ в Интернет"></td>
+            <td><img src="<?= src('demands6.png', 'images') ?>" alt="Доступ в Интернет" title="Доступ в Интернет"></td>
             <td class="td4" colspan="2">Доступ в Интернет по ADSL 56 Кбит/с или более высокоскоростной канал. Оборудование для переговоров в онлайн-режиме teamspeak (наушники, микрофон).</td>
           </tr>
         </tbody>
